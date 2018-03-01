@@ -18,20 +18,20 @@ function solve_all(files) {
 	for ( let file of files ){
 		fs.readFile( dir+file, 'utf8', function(err,rawdata){
 		console.log( dir+file );
-			// console.log(rawdata.length);
-			var data = rawdata.split('\n');
-			// console.log(typeof rawdata);
-			metadata = data.shift();
-			metadata = metadata.split(' ');
+		// console.log(rawdata.length);
+		var data = rawdata.split('\n');
+		// console.log(typeof rawdata);
+		metadata = data.shift();
+		metadata = metadata.split(' ');
 
-			let rows = metadata[0];
-			let columns = metadata[1];
-			let cars = metadata[2];
-			let ridenum = metadata[3];
-			let bonus = metadata[4];
-			let steps = metadata[5];
+		let rows = metadata[0];
+		let columns = metadata[1];
+		let cars = metadata[2];
+		let ridenum = metadata[3];
+		let bonus = metadata[4];
+		let steps = metadata[5];
 
-			console.log(metadata);
+		console.log(metadata);
 		// 	fs.writeFile('writeMe.txt', data);
 		});
 	}
